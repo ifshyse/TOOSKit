@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC716C901CB4C12400BDDE2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C8F1CB4C12400BDDE2C /* main.m */; };
+		DC716C931CB4C12400BDDE2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C921CB4C12400BDDE2C /* AppDelegate.m */; };
+		DC716C961CB4C12400BDDE2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C951CB4C12400BDDE2C /* ViewController.m */; };
+		DC716C991CB4C12400BDDE2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC716C971CB4C12400BDDE2C /* Main.storyboard */; };
+		DC716C9B1CB4C12400BDDE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC716C9A1CB4C12400BDDE2C /* Assets.xcassets */; };
+		DC716C9E1CB4C12400BDDE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC716C9C1CB4C12400BDDE2C /* LaunchScreen.storyboard */; };
+		DC716CA91CB4C12400BDDE2C /* TOOSLayoutExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CA81CB4C12400BDDE2C /* TOOSLayoutExampleTests.m */; };
+		DC716CB41CB4C12400BDDE2C /* TOOSLayoutExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CB31CB4C12400BDDE2C /* TOOSLayoutExampleUITests.m */; };
+		DC716CC71CB4C20D00BDDE2C /* CALayer+TOOSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CC61CB4C20D00BDDE2C /* CALayer+TOOSExtension.m */; };
+		DC716CCA1CB4C35B00BDDE2C /* TOOSRunLoopObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CC91CB4C35B00BDDE2C /* TOOSRunLoopObserver.m */; };
+		DC716CCD1CB4CC1300BDDE2C /* TOOSTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */; };
+		DC716CD01CB4ED4200BDDE2C /* TOOSTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC716CA51CB4C12400BDDE2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC716C831CB4C12400BDDE2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC716C8A1CB4C12400BDDE2C;
+			remoteInfo = TOOSLayoutExample;
+		};
+		DC716CB01CB4C12400BDDE2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC716C831CB4C12400BDDE2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC716C8A1CB4C12400BDDE2C;
+			remoteInfo = TOOSLayoutExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DC716C8B1CB4C12400BDDE2C /* TOOSLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOOSLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC716C8F1CB4C12400BDDE2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC716C911CB4C12400BDDE2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DC716C921CB4C12400BDDE2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DC716C941CB4C12400BDDE2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DC716C951CB4C12400BDDE2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DC716C981CB4C12400BDDE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC716C9A1CB4C12400BDDE2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DC716C9D1CB4C12400BDDE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DC716C9F1CB4C12400BDDE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC716CA41CB4C12400BDDE2C /* TOOSLayoutExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOOSLayoutExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC716CA81CB4C12400BDDE2C /* TOOSLayoutExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOOSLayoutExampleTests.m; sourceTree = "<group>"; };
+		DC716CAA1CB4C12400BDDE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC716CAF1CB4C12400BDDE2C /* TOOSLayoutExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOOSLayoutExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC716CB31CB4C12400BDDE2C /* TOOSLayoutExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOOSLayoutExampleUITests.m; sourceTree = "<group>"; };
+		DC716CB51CB4C12400BDDE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC716CC51CB4C20D00BDDE2C /* CALayer+TOOSExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+TOOSExtension.h"; sourceTree = "<group>"; };
+		DC716CC61CB4C20D00BDDE2C /* CALayer+TOOSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+TOOSExtension.m"; sourceTree = "<group>"; };
+		DC716CC81CB4C35B00BDDE2C /* TOOSRunLoopObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSRunLoopObserver.h; sourceTree = "<group>"; };
+		DC716CC91CB4C35B00BDDE2C /* TOOSRunLoopObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSRunLoopObserver.m; sourceTree = "<group>"; };
+		DC716CCB1CB4CC1300BDDE2C /* TOOSTextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSTextParser.h; sourceTree = "<group>"; };
+		DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextParser.m; sourceTree = "<group>"; };
+		DC716CCE1CB4ED4200BDDE2C /* TOOSTextLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSTextLayout.h; sourceTree = "<group>"; };
+		DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextLayout.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC716C881CB4C12400BDDE2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CA11CB4C12400BDDE2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CAC1CB4C12400BDDE2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC716C821CB4C12400BDDE2C = {
+			isa = PBXGroup;
+			children = (
+				DC716C8D1CB4C12400BDDE2C /* TOOSLayoutExample */,
+				DC716CA71CB4C12400BDDE2C /* TOOSLayoutExampleTests */,
+				DC716CB21CB4C12400BDDE2C /* TOOSLayoutExampleUITests */,
+				DC716C8C1CB4C12400BDDE2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC716C8C1CB4C12400BDDE2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC716C8B1CB4C12400BDDE2C /* TOOSLayoutExample.app */,
+				DC716CA41CB4C12400BDDE2C /* TOOSLayoutExampleTests.xctest */,
+				DC716CAF1CB4C12400BDDE2C /* TOOSLayoutExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC716C8D1CB4C12400BDDE2C /* TOOSLayoutExample */ = {
+			isa = PBXGroup;
+			children = (
+				DC716CC11CB4C15100BDDE2C /* TOOSLayout */,
+				DC716C911CB4C12400BDDE2C /* AppDelegate.h */,
+				DC716C921CB4C12400BDDE2C /* AppDelegate.m */,
+				DC716C941CB4C12400BDDE2C /* ViewController.h */,
+				DC716C951CB4C12400BDDE2C /* ViewController.m */,
+				DC716C971CB4C12400BDDE2C /* Main.storyboard */,
+				DC716C9A1CB4C12400BDDE2C /* Assets.xcassets */,
+				DC716C9C1CB4C12400BDDE2C /* LaunchScreen.storyboard */,
+				DC716C9F1CB4C12400BDDE2C /* Info.plist */,
+				DC716C8E1CB4C12400BDDE2C /* Supporting Files */,
+			);
+			path = TOOSLayoutExample;
+			sourceTree = "<group>";
+		};
+		DC716C8E1CB4C12400BDDE2C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC716C8F1CB4C12400BDDE2C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC716CA71CB4C12400BDDE2C /* TOOSLayoutExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				DC716CA81CB4C12400BDDE2C /* TOOSLayoutExampleTests.m */,
+				DC716CAA1CB4C12400BDDE2C /* Info.plist */,
+			);
+			path = TOOSLayoutExampleTests;
+			sourceTree = "<group>";
+		};
+		DC716CB21CB4C12400BDDE2C /* TOOSLayoutExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DC716CB31CB4C12400BDDE2C /* TOOSLayoutExampleUITests.m */,
+				DC716CB51CB4C12400BDDE2C /* Info.plist */,
+			);
+			path = TOOSLayoutExampleUITests;
+			sourceTree = "<group>";
+		};
+		DC716CC11CB4C15100BDDE2C /* TOOSLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DC716CC51CB4C20D00BDDE2C /* CALayer+TOOSExtension.h */,
+				DC716CC61CB4C20D00BDDE2C /* CALayer+TOOSExtension.m */,
+				DC716CC81CB4C35B00BDDE2C /* TOOSRunLoopObserver.h */,
+				DC716CC91CB4C35B00BDDE2C /* TOOSRunLoopObserver.m */,
+				DC716CCB1CB4CC1300BDDE2C /* TOOSTextParser.h */,
+				DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */,
+				DC716CCE1CB4ED4200BDDE2C /* TOOSTextLayout.h */,
+				DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */,
+			);
+			name = TOOSLayout;
+			path = ../../TOOLS/TOOSLayout;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC716C8A1CB4C12400BDDE2C /* TOOSLayoutExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC716CB81CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExample" */;
+			buildPhases = (
+				DC716C871CB4C12400BDDE2C /* Sources */,
+				DC716C881CB4C12400BDDE2C /* Frameworks */,
+				DC716C891CB4C12400BDDE2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TOOSLayoutExample;
+			productName = TOOSLayoutExample;
+			productReference = DC716C8B1CB4C12400BDDE2C /* TOOSLayoutExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC716CA31CB4C12400BDDE2C /* TOOSLayoutExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC716CBB1CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExampleTests" */;
+			buildPhases = (
+				DC716CA01CB4C12400BDDE2C /* Sources */,
+				DC716CA11CB4C12400BDDE2C /* Frameworks */,
+				DC716CA21CB4C12400BDDE2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC716CA61CB4C12400BDDE2C /* PBXTargetDependency */,
+			);
+			name = TOOSLayoutExampleTests;
+			productName = TOOSLayoutExampleTests;
+			productReference = DC716CA41CB4C12400BDDE2C /* TOOSLayoutExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DC716CAE1CB4C12400BDDE2C /* TOOSLayoutExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC716CBE1CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExampleUITests" */;
+			buildPhases = (
+				DC716CAB1CB4C12400BDDE2C /* Sources */,
+				DC716CAC1CB4C12400BDDE2C /* Frameworks */,
+				DC716CAD1CB4C12400BDDE2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC716CB11CB4C12400BDDE2C /* PBXTargetDependency */,
+			);
+			name = TOOSLayoutExampleUITests;
+			productName = TOOSLayoutExampleUITests;
+			productReference = DC716CAF1CB4C12400BDDE2C /* TOOSLayoutExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC716C831CB4C12400BDDE2C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Stephen;
+				TargetAttributes = {
+					DC716C8A1CB4C12400BDDE2C = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DC716CA31CB4C12400BDDE2C = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DC716C8A1CB4C12400BDDE2C;
+					};
+					DC716CAE1CB4C12400BDDE2C = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DC716C8A1CB4C12400BDDE2C;
+					};
+				};
+			};
+			buildConfigurationList = DC716C861CB4C12400BDDE2C /* Build configuration list for PBXProject "TOOSLayoutExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC716C821CB4C12400BDDE2C;
+			productRefGroup = DC716C8C1CB4C12400BDDE2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC716C8A1CB4C12400BDDE2C /* TOOSLayoutExample */,
+				DC716CA31CB4C12400BDDE2C /* TOOSLayoutExampleTests */,
+				DC716CAE1CB4C12400BDDE2C /* TOOSLayoutExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC716C891CB4C12400BDDE2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC716C9E1CB4C12400BDDE2C /* LaunchScreen.storyboard in Resources */,
+				DC716C9B1CB4C12400BDDE2C /* Assets.xcassets in Resources */,
+				DC716C991CB4C12400BDDE2C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CA21CB4C12400BDDE2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CAD1CB4C12400BDDE2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC716C871CB4C12400BDDE2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC716CC71CB4C20D00BDDE2C /* CALayer+TOOSExtension.m in Sources */,
+				DC716CD01CB4ED4200BDDE2C /* TOOSTextLayout.m in Sources */,
+				DC716C961CB4C12400BDDE2C /* ViewController.m in Sources */,
+				DC716C931CB4C12400BDDE2C /* AppDelegate.m in Sources */,
+				DC716CCA1CB4C35B00BDDE2C /* TOOSRunLoopObserver.m in Sources */,
+				DC716CCD1CB4CC1300BDDE2C /* TOOSTextParser.m in Sources */,
+				DC716C901CB4C12400BDDE2C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CA01CB4C12400BDDE2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC716CA91CB4C12400BDDE2C /* TOOSLayoutExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC716CAB1CB4C12400BDDE2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC716CB41CB4C12400BDDE2C /* TOOSLayoutExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC716CA61CB4C12400BDDE2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC716C8A1CB4C12400BDDE2C /* TOOSLayoutExample */;
+			targetProxy = DC716CA51CB4C12400BDDE2C /* PBXContainerItemProxy */;
+		};
+		DC716CB11CB4C12400BDDE2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC716C8A1CB4C12400BDDE2C /* TOOSLayoutExample */;
+			targetProxy = DC716CB01CB4C12400BDDE2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DC716C971CB4C12400BDDE2C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC716C981CB4C12400BDDE2C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC716C9C1CB4C12400BDDE2C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC716C9D1CB4C12400BDDE2C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC716CB61CB4C12400BDDE2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DC716CB71CB4C12400BDDE2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC716CB91CB4C12400BDDE2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TOOSLayoutExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DC716CBA1CB4C12400BDDE2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TOOSLayoutExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DC716CBC1CB4C12400BDDE2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TOOSLayoutExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOOSLayoutExample.app/TOOSLayoutExample";
+			};
+			name = Debug;
+		};
+		DC716CBD1CB4C12400BDDE2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TOOSLayoutExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOOSLayoutExample.app/TOOSLayoutExample";
+			};
+			name = Release;
+		};
+		DC716CBF1CB4C12400BDDE2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TOOSLayoutExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TOOSLayoutExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DC716CC01CB4C12400BDDE2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TOOSLayoutExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toos..TOOSLayoutExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TOOSLayoutExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC716C861CB4C12400BDDE2C /* Build configuration list for PBXProject "TOOSLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC716CB61CB4C12400BDDE2C /* Debug */,
+				DC716CB71CB4C12400BDDE2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC716CB81CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC716CB91CB4C12400BDDE2C /* Debug */,
+				DC716CBA1CB4C12400BDDE2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC716CBB1CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC716CBC1CB4C12400BDDE2C /* Debug */,
+				DC716CBD1CB4C12400BDDE2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC716CBE1CB4C12400BDDE2C /* Build configuration list for PBXNativeTarget "TOOSLayoutExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC716CBF1CB4C12400BDDE2C /* Debug */,
+				DC716CC01CB4C12400BDDE2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC716C831CB4C12400BDDE2C /* Project object */;
+}
