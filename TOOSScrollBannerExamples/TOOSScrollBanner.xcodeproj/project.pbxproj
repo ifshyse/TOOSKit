@@ -15,8 +15,6 @@
 		DC716C051CB49C9000BDDE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC716C031CB49C9000BDDE2C /* LaunchScreen.storyboard */; };
 		DC716C101CB49C9100BDDE2C /* TOOSScrollBannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C0F1CB49C9100BDDE2C /* TOOSScrollBannerTests.m */; };
 		DC716C1B1CB49C9100BDDE2C /* TOOSScrollBannerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C1A1CB49C9100BDDE2C /* TOOSScrollBannerUITests.m */; };
-		DC716C2D1CB49D8A00BDDE2C /* TOOSBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C2A1CB49D8A00BDDE2C /* TOOSBannerView.m */; };
-		DC716C2E1CB49D8A00BDDE2C /* TOOSScrollBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C2C1CB49D8A00BDDE2C /* TOOSScrollBanner.m */; };
 		DC716C5E1CB49E8F00BDDE2C /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C311CB49E8F00BDDE2C /* MKAnnotationView+WebCache.m */; };
 		DC716C5F1CB49E8F00BDDE2C /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C331CB49E8F00BDDE2C /* NSData+ImageContentType.m */; };
 		DC716C601CB49E8F00BDDE2C /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C351CB49E8F00BDDE2C /* SDImageCache.m */; };
@@ -39,6 +37,8 @@
 		DC716C711CB49E8F00BDDE2C /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C591CB49E8F00BDDE2C /* TADotView.m */; };
 		DC716C721CB49E8F00BDDE2C /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C5B1CB49E8F00BDDE2C /* TAPageControl.m */; };
 		DC716C731CB49E8F00BDDE2C /* UIImageView+RJLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C5D1CB49E8F00BDDE2C /* UIImageView+RJLoader.m */; };
+		DC716C801CB4A80300BDDE2C /* TOOSBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C7D1CB4A80300BDDE2C /* TOOSBannerView.m */; };
+		DC716C811CB4A80300BDDE2C /* TOOSScrollBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C7F1CB4A80300BDDE2C /* TOOSScrollBanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +75,6 @@
 		DC716C161CB49C9100BDDE2C /* TOOSScrollBannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOOSScrollBannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC716C1A1CB49C9100BDDE2C /* TOOSScrollBannerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOOSScrollBannerUITests.m; sourceTree = "<group>"; };
 		DC716C1C1CB49C9100BDDE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC716C291CB49D8A00BDDE2C /* TOOSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSBannerView.h; sourceTree = "<group>"; };
-		DC716C2A1CB49D8A00BDDE2C /* TOOSBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSBannerView.m; sourceTree = "<group>"; };
-		DC716C2B1CB49D8A00BDDE2C /* TOOSScrollBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSScrollBanner.h; sourceTree = "<group>"; };
-		DC716C2C1CB49D8A00BDDE2C /* TOOSScrollBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSScrollBanner.m; sourceTree = "<group>"; };
 		DC716C301CB49E8F00BDDE2C /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		DC716C311CB49E8F00BDDE2C /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		DC716C321CB49E8F00BDDE2C /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -124,6 +120,10 @@
 		DC716C5B1CB49E8F00BDDE2C /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
 		DC716C5C1CB49E8F00BDDE2C /* UIImageView+RJLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RJLoader.h"; sourceTree = "<group>"; };
 		DC716C5D1CB49E8F00BDDE2C /* UIImageView+RJLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RJLoader.m"; sourceTree = "<group>"; };
+		DC716C7C1CB4A80300BDDE2C /* TOOSBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSBannerView.h; sourceTree = "<group>"; };
+		DC716C7D1CB4A80300BDDE2C /* TOOSBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSBannerView.m; sourceTree = "<group>"; };
+		DC716C7E1CB4A80300BDDE2C /* TOOSScrollBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSScrollBanner.h; sourceTree = "<group>"; };
+		DC716C7F1CB4A80300BDDE2C /* TOOSScrollBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSScrollBanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,9 +174,9 @@
 		DC716BF41CB49C9000BDDE2C /* TOOSScrollBanner */ = {
 			isa = PBXGroup;
 			children = (
+				DC716C7B1CB4A80300BDDE2C /* TOOSBannerView */,
 				DC716C2F1CB49E8F00BDDE2C /* SDWebImage */,
 				DC716C511CB49E8F00BDDE2C /* TAControl */,
-				DC716C281CB49D8A00BDDE2C /* BannerView */,
 				DC716BF81CB49C9000BDDE2C /* AppDelegate.h */,
 				DC716BF91CB49C9000BDDE2C /* AppDelegate.m */,
 				DC716BFB1CB49C9000BDDE2C /* ViewController.h */,
@@ -215,17 +215,6 @@
 			);
 			path = TOOSScrollBannerUITests;
 			sourceTree = "<group>";
-		};
-		DC716C281CB49D8A00BDDE2C /* BannerView */ = {
-			isa = PBXGroup;
-			children = (
-				DC716C291CB49D8A00BDDE2C /* TOOSBannerView.h */,
-				DC716C2A1CB49D8A00BDDE2C /* TOOSBannerView.m */,
-				DC716C2B1CB49D8A00BDDE2C /* TOOSScrollBanner.h */,
-				DC716C2C1CB49D8A00BDDE2C /* TOOSScrollBanner.m */,
-			);
-			path = BannerView;
-			sourceTree = SOURCE_ROOT;
 		};
 		DC716C2F1CB49E8F00BDDE2C /* SDWebImage */ = {
 			isa = PBXGroup;
@@ -285,6 +274,18 @@
 			);
 			path = TAControl;
 			sourceTree = SOURCE_ROOT;
+		};
+		DC716C7B1CB4A80300BDDE2C /* TOOSBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				DC716C7C1CB4A80300BDDE2C /* TOOSBannerView.h */,
+				DC716C7D1CB4A80300BDDE2C /* TOOSBannerView.m */,
+				DC716C7E1CB4A80300BDDE2C /* TOOSScrollBanner.h */,
+				DC716C7F1CB4A80300BDDE2C /* TOOSScrollBanner.m */,
+			);
+			name = TOOSBannerView;
+			path = ../../TOOLS/TOOSBannerView;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -424,7 +425,6 @@
 				DC716C6A1CB49E8F00BDDE2C /* UIImage+WebP.m in Sources */,
 				DC716C6E1CB49E8F00BDDE2C /* RJCircularLoaderView.m in Sources */,
 				DC716C661CB49E8F00BDDE2C /* SDWebImagePrefetcher.m in Sources */,
-				DC716C2D1CB49D8A00BDDE2C /* TOOSBannerView.m in Sources */,
 				DC716C701CB49E8F00BDDE2C /* TAAnimatedDotView.m in Sources */,
 				DC716C621CB49E8F00BDDE2C /* SDWebImageDecoder.m in Sources */,
 				DC716C631CB49E8F00BDDE2C /* SDWebImageDownloader.m in Sources */,
@@ -433,16 +433,17 @@
 				DC716C6D1CB49E8F00BDDE2C /* UIView+WebCacheOperation.m in Sources */,
 				DC716C671CB49E8F00BDDE2C /* UIButton+WebCache.m in Sources */,
 				DC716C691CB49E8F00BDDE2C /* UIImage+MultiFormat.m in Sources */,
-				DC716C2E1CB49D8A00BDDE2C /* TOOSScrollBanner.m in Sources */,
 				DC716C641CB49E8F00BDDE2C /* SDWebImageDownloaderOperation.m in Sources */,
 				DC716C681CB49E8F00BDDE2C /* UIImage+GIF.m in Sources */,
 				DC716C721CB49E8F00BDDE2C /* TAPageControl.m in Sources */,
 				DC716C611CB49E8F00BDDE2C /* SDWebImageCompat.m in Sources */,
+				DC716C811CB4A80300BDDE2C /* TOOSScrollBanner.m in Sources */,
 				DC716C5F1CB49E8F00BDDE2C /* NSData+ImageContentType.m in Sources */,
 				DC716BF71CB49C9000BDDE2C /* main.m in Sources */,
 				DC716C5E1CB49E8F00BDDE2C /* MKAnnotationView+WebCache.m in Sources */,
 				DC716C601CB49E8F00BDDE2C /* SDImageCache.m in Sources */,
 				DC716C711CB49E8F00BDDE2C /* TADotView.m in Sources */,
+				DC716C801CB4A80300BDDE2C /* TOOSBannerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
