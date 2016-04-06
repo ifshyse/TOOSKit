@@ -20,34 +20,21 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-//  TOOSBannerView.h
-//  
+//  TOOSTextAttachment.h
+//  TOOSLayoutExample
 //
-//  Created by Stephen on 2/27/16.
+//  Created by Stephen on 4/6/16.
 //  Copyright © 2016 Stephen. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@class TOOSScrollBanner;
+@interface TOOSTextAttachment : NSObject
 
-@protocol TOOSBannerViewDelegate <NSObject>
-
-@optional
-- (void)bannerView:(TOOSScrollBanner*)scrollbanner clickImgAtIndex:(NSInteger)index;
-- (void)reloadBannerView;
-
-@end
-
-@interface TOOSBannerView : UIView
-
-@property (nonatomic , weak) id<TOOSBannerViewDelegate> delegate;
-
-@property (nonatomic, strong) UIColor* bannerColor;
-
-- (void)setBannerArray:(NSArray*)array;
-- (void)removeBannerView;
-- (void)stopBannerAnimating;
-- (void)startBannerAnimating;
+@property (nonatomic,strong) UIImage* image;
+@property (nonatomic,assign) NSRange range;
+@property (nonatomic,assign) CGRect imgRect;
+@property (nonatomic,assign) CGRectEdge insets;
 
 @end

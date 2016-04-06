@@ -19,6 +19,7 @@
 		DC716CCA1CB4C35B00BDDE2C /* TOOSRunLoopObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CC91CB4C35B00BDDE2C /* TOOSRunLoopObserver.m */; };
 		DC716CCD1CB4CC1300BDDE2C /* TOOSTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */; };
 		DC716CD01CB4ED4200BDDE2C /* TOOSTextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */; };
+		DC716CD31CB5083500BDDE2C /* TOOSTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716CD21CB5083500BDDE2C /* TOOSTextAttachment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextParser.m; sourceTree = "<group>"; };
 		DC716CCE1CB4ED4200BDDE2C /* TOOSTextLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSTextLayout.h; sourceTree = "<group>"; };
 		DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextLayout.m; sourceTree = "<group>"; };
+		DC716CD11CB5083500BDDE2C /* TOOSTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSTextAttachment.h; sourceTree = "<group>"; };
+		DC716CD21CB5083500BDDE2C /* TOOSTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextAttachment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				DC716CCC1CB4CC1300BDDE2C /* TOOSTextParser.m */,
 				DC716CCE1CB4ED4200BDDE2C /* TOOSTextLayout.h */,
 				DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */,
+				DC716CD11CB5083500BDDE2C /* TOOSTextAttachment.h */,
+				DC716CD21CB5083500BDDE2C /* TOOSTextAttachment.m */,
 			);
 			name = TOOSLayout;
 			path = ../../TOOLS/TOOSLayout;
@@ -301,6 +306,7 @@
 			files = (
 				DC716CC71CB4C20D00BDDE2C /* CALayer+TOOSExtension.m in Sources */,
 				DC716CD01CB4ED4200BDDE2C /* TOOSTextLayout.m in Sources */,
+				DC716CD31CB5083500BDDE2C /* TOOSTextAttachment.m in Sources */,
 				DC716C961CB4C12400BDDE2C /* ViewController.m in Sources */,
 				DC716C931CB4C12400BDDE2C /* AppDelegate.m in Sources */,
 				DC716CCA1CB4C35B00BDDE2C /* TOOSRunLoopObserver.m in Sources */,
