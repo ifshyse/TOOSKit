@@ -1,9 +1,9 @@
 //
 //  TOOSScrollBanner.m
-//  TOOSScrollBanner
+//  
 //
 //  Created by Stephen on 16/1/29.
-//  Copyright © 2016年 Guoda. All rights reserved.
+//  Copyright © 2016年 Stephen. All rights reserved.
 //
 
 #import "TOOSScrollBanner.h"

@@ -1,9 +1,9 @@
 //
 //  TOOSBannerView.m
-//  iStudent
+//  
 //
 //  Created by Stephen on 2/27/16.
-//  Copyright © 2016 taomee. All rights reserved.
+//  Copyright © 2016 Stephen. All rights reserved.
 //
 
 #import "TOOSBannerView.h"

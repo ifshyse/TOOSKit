@@ -1,9 +1,9 @@
 //
 //  TOOSScrollBanner.h
-//  TOOSScrollBanner
+//  
 //
 //  Created by Stephen on 16/2/17.
-//  Copyright © 2016年 Guoda. All rights reserved.
+//  Copyright © 2016年 Stephen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
