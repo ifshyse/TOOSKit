@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC57BF561CB63637005AA47D /* TOOSTextAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57BF551CB63637005AA47D /* TOOSTextAttribute.m */; };
 		DC716C901CB4C12400BDDE2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C8F1CB4C12400BDDE2C /* main.m */; };
 		DC716C931CB4C12400BDDE2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C921CB4C12400BDDE2C /* AppDelegate.m */; };
 		DC716C961CB4C12400BDDE2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC716C951CB4C12400BDDE2C /* ViewController.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC57BF541CB63637005AA47D /* TOOSTextAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOOSTextAttribute.h; sourceTree = "<group>"; };
+		DC57BF551CB63637005AA47D /* TOOSTextAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOOSTextAttribute.m; sourceTree = "<group>"; };
 		DC716C8B1CB4C12400BDDE2C /* TOOSLayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOOSLayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC716C8F1CB4C12400BDDE2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC716C911CB4C12400BDDE2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				DC716CCF1CB4ED4200BDDE2C /* TOOSTextLayout.m */,
 				DC716CD11CB5083500BDDE2C /* TOOSTextAttachment.h */,
 				DC716CD21CB5083500BDDE2C /* TOOSTextAttachment.m */,
+				DC57BF541CB63637005AA47D /* TOOSTextAttribute.h */,
+				DC57BF551CB63637005AA47D /* TOOSTextAttribute.m */,
 			);
 			name = TOOSLayout;
 			path = ../../TOOLS/TOOSLayout;
@@ -309,6 +314,7 @@
 				DC716CD31CB5083500BDDE2C /* TOOSTextAttachment.m in Sources */,
 				DC716C961CB4C12400BDDE2C /* ViewController.m in Sources */,
 				DC716C931CB4C12400BDDE2C /* AppDelegate.m in Sources */,
+				DC57BF561CB63637005AA47D /* TOOSTextAttribute.m in Sources */,
 				DC716CCA1CB4C35B00BDDE2C /* TOOSRunLoopObserver.m in Sources */,
 				DC716CCD1CB4CC1300BDDE2C /* TOOSTextParser.m in Sources */,
 				DC716C901CB4C12400BDDE2C /* main.m in Sources */,

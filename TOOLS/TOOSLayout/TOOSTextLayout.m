@@ -29,6 +29,7 @@
 
 #import "TOOSTextLayout.h"
 #import "TOOSTextAttachment.h"
+#import "TOOSTextAttribute.h"
 
 #pragma mark - Private
 
@@ -165,6 +166,11 @@ static CTUnderlineStyle _coreTextUnderlineStyleFromNSUnderlineStyle(NSUnderlineS
         self.underlineStyle = NSUnderlineStyleNone;
         self.widthToFit = YES;
         self.headerFont = [UIFont systemFontOfSize:20.0f];
+        self.boldFont = [UIFont boldSystemFontOfSize:14.0f];
+        self.italicFont = [UIFont italicSystemFontOfSize:14.0f];
+        UIFontDescriptor *bodyFontDesciptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleBody];
+        self.boldItalicFont = [UIFont fontWithDescriptor:[bodyFontDesciptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold | UIFontDescriptorTraitItalic] size:14.0f];
+        
         self.headerFonts = [[NSMutableArray alloc] init];
         for (int i = 0; i < 6; i++) {
             CGFloat size =  - (self.headerFontSize - self.fontSize) / 5.0 * i;
@@ -259,6 +265,7 @@ static CTUnderlineStyle _coreTextUnderlineStyleFromNSUnderlineStyle(NSUnderlineS
     [self createCTFrameRef];
 }
 
+#pragma mark - Add attribute
 - (void)setTextWithTextColor:(UIColor*)textColor inRange:(NSRange)range  {
     if (_attributedText == nil || _attributedText.length == 0) {
         return;
@@ -267,6 +274,18 @@ static CTUnderlineStyle _coreTextUnderlineStyleFromNSUnderlineStyle(NSUnderlineS
     [self _mutableAttributedString:_attributedText addAttributesWithTextColor:textColor
                            inRange:range];
     [self createCTFrameRef];
+}
+
+- (void)setTextUnderline:(TOOSTextDecoration *)textUnderline
+                   range:(NSRange)range
+{
+    
+}
+
+- (void)setTextStrikethrough:(TOOSTextDecoration *)textUnderline
+                       range:(NSRange)range
+{
+    
 }
 
 #pragma mark - Add Image

@@ -30,6 +30,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
+#import "TOOSTextAttribute.h"
 
 @class TOOSTextAttachment;
 
@@ -98,6 +99,21 @@ typedef NS_ENUM(NSUInteger, TOOSVerticalAlignment){
  *  header font
  */
 @property (nonatomic,strong) UIFont* headerFont;
+
+/**
+ *  italic font
+ */
+@property (nonatomic,strong) UIFont* italicFont;
+
+/**
+ *  bold font
+ */
+@property (nonatomic,strong) UIFont* boldFont;
+
+/**
+ *  bold italic font
+ */
+@property (nonatomic,strong) UIFont* boldItalicFont;
 
 /**
  *  header font array
@@ -198,6 +214,19 @@ typedef NS_ENUM(NSUInteger, TOOSVerticalAlignment){
          highLightColor:(UIColor *)highLightColor
          UnderLineStyle:(NSUnderlineStyle)underlineStyle;
 
+/**
+ *  set text underline
+ *
+ */
+- (void)setTextUnderline:(TOOSTextDecoration *)textUnderline
+                   range:(NSRange)range;
+
+/**
+ *  set text strike through
+ *
+ */
+- (void)setTextStrikethrough:(TOOSTextDecoration *)textUnderline
+                   range:(NSRange)range;
 /**
  *  replace local image with specified text
  *

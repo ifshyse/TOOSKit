@@ -29,14 +29,27 @@
 
 #import "TOOSTextParser.h"
 #import "TOOSTextLayout.h"
+#import "TOOSTextAttribute.h"
 
-#define URL_REGULAR_EX      @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
-#define EMOJI_REGULAR_EX    @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]"
-#define ACCOUNT_REGULAR_EX  @"@[\u4e00-\u9fa5a-zA-Z0-9_-]{2,30}"
-#define TOPIC_REGULAR_EX    @"#[^#]+#"
-#define HEADER_REGULAR_EX   @"^((\\#{1,6}[^#].*)|(\\#{6}.+))$"
-#define H1_REGULAR_EX       @"^[^=\\n][^\\n]*\\n=+$"
-#define H2_REGULAR_EX       @"^[^-\\n][^\\n]*\\n-+$"
+#define URL_REGULAR_EX                 @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+#define EMOJI_REGULAR_EX               @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]"
+#define ACCOUNT_REGULAR_EX             @"@[\u4e00-\u9fa5a-zA-Z0-9_-]{2,30}"
+#define TOPIC_REGULAR_EX               @"#[^#]+#"
+#define HEADER_REGULAR_EX              @"^((\\#{1,6}[^#].*)|(\\#{6}.+))$"
+#define H1_REGULAR_EX                  @"^[^=\\n][^\\n]*\\n=+$"
+#define H2_REGULAR_EX                  @"^[^-\\n][^\\n]*\\n-+$"
+#define BREAKLINE_REGULAR_EX           @"^[ \\t]*([*-])[ \\t]*((\\1)[ \\t]*){2,}[ \\t]*$"
+#define EMPHASIS_REGULAR_EX            @"((?<!\\*)\\*(?=[^ \\t*])(.+?)(?<=[^ \\t*])\\*(?!\\*)|(?<!_)_(?=[^ \\t_])(.+?)(?<=[^ \\t_])_(?!_))"
+#define STRONG_REGULAR_EX              @"(?<!\\*)\\*{2}(?=[^ \\t*])(.+?)(?<=[^ \\t*])\\*{2}(?!\\*)"
+#define STRONG_EMPHASIS_REGULAR_EX     @"((?<!\\*)\\*{3}(?=[^ \\t*])(.+?)(?<=[^ \\t*])\\*{3}(?!\\*)|(?<!_)_{3}(?=[^ \\t_])(.+?)(?<=[^ \\t_])_{3}(?!_))"
+#define UNDERLINE_REGULAR_EX           @"(?<!_)__(?=[^ \\t_])(.+?)(?<=[^ \\t_])\\__(?!_)"
+#define STRIKETHROUGH_REGULAR_EX       @"(?<!~)~~(?=[^ \\t~])(.+?)(?<=[^ \\t~])\\~~(?!~)"
+#define INLINECODE_REGULAR_EX          @"(?<!`)(`{1,3})([^`\n]+?)\\1(?!`)"
+#define LINKREFER_REGULAR_EX           @"^[ \\t]*\\[[^\\[\\]]\\]:"
+#define LIST_REGULAR_EX                @"^[ \\t]*([*+-]|\\d+[.])[ \\t]+"
+#define BLOCKQUOTE_REGULAR_EX          @"^[ \\t]*>[ \\t>]*"
+#define CODEBLOCK_REGULAR_EX           @"^\\s*$\\n)((( {4}|\\t).*(\\n|\\z))|(^\\s*$\\n))+"
+#define NOTEMPTYLINE_REGULAR_EX        @"^[ \\t]*[^ \\t]+[ \\t]*$"
 
 static NSRegularExpression* _HeaderRegularExpression = nil;
 static NSRegularExpression* _EmojiRegularExpression = nil;
@@ -45,6 +58,18 @@ static NSRegularExpression* _AccountRegularExpression = nil;
 static NSRegularExpression* _TopicRegularExpression = nil;
 static NSRegularExpression* _H1RegularExpression = nil;
 static NSRegularExpression* _H2RegularExpression = nil;
+static NSRegularExpression* _BreaklineRegularExpression = nil;
+static NSRegularExpression* _EmphasisRegularExpression = nil;
+static NSRegularExpression* _StrongRegularExpression = nil;
+static NSRegularExpression* _StrongEmphasisRegularExpression = nil;
+static NSRegularExpression* _UnderlineRegularExpression = nil;
+static NSRegularExpression* _StrikeThroughRegularExpression = nil;
+static NSRegularExpression* _InlineCodeRegularExpression = nil;
+static NSRegularExpression* _LinkReferRegularExpression = nil;
+static NSRegularExpression* _ListRegularExpression = nil;
+static NSRegularExpression* _BlockQuoteRegularExpression = nil;
+static NSRegularExpression* _CodeBlockRegularExpression = nil;
+static NSRegularExpression* _NotEmptyLineRegularExpression = nil;
 
 #define REGULAR_EXPRESSION(expression, name) \
 __block NSRegularExpression* exp = expression; \
@@ -80,6 +105,54 @@ static inline NSRegularExpression* H1RegularExpression() {
 
 static inline NSRegularExpression* H2RegularExpression() {
     REGULAR_EXPRESSION(_H2RegularExpression, H2_REGULAR_EX);
+}
+
+static inline NSRegularExpression* BreaklineRegularExpression() {
+    REGULAR_EXPRESSION(_BreaklineRegularExpression, BREAKLINE_REGULAR_EX);
+}
+
+static inline NSRegularExpression* EmphasisRegularExpression() {
+    REGULAR_EXPRESSION(_EmphasisRegularExpression, EMPHASIS_REGULAR_EX);
+}
+
+static inline NSRegularExpression* StrongRegularExpression() {
+    REGULAR_EXPRESSION(_StrongRegularExpression, STRONG_REGULAR_EX);
+}
+
+static inline NSRegularExpression* StrongEmphasisRegularExpression() {
+    REGULAR_EXPRESSION(_StrongEmphasisRegularExpression, STRONG_EMPHASIS_REGULAR_EX);
+}
+
+static inline NSRegularExpression* UnderlineRegularExpression() {
+    REGULAR_EXPRESSION(_UnderlineRegularExpression, UNDERLINE_REGULAR_EX);
+}
+
+static inline NSRegularExpression* StrikeThroughRegularExpression() {
+    REGULAR_EXPRESSION(_StrikeThroughRegularExpression, STRIKETHROUGH_REGULAR_EX);
+}
+
+static inline NSRegularExpression* InlineCodeRegularExpression() {
+    REGULAR_EXPRESSION(_InlineCodeRegularExpression, INLINECODE_REGULAR_EX);
+}
+
+static inline NSRegularExpression* LinkReferRegularExpression() {
+    REGULAR_EXPRESSION(_LinkReferRegularExpression, LINKREFER_REGULAR_EX);
+}
+
+static inline NSRegularExpression* ListRegularExpression() {
+    REGULAR_EXPRESSION(_ListRegularExpression, LIST_REGULAR_EX);
+}
+
+static inline NSRegularExpression* BlockQuoteRegularExpression() {
+    REGULAR_EXPRESSION(_BlockQuoteRegularExpression, BLOCKQUOTE_REGULAR_EX);
+}
+
+static inline NSRegularExpression* CodeBlockRegularExpression() {
+    REGULAR_EXPRESSION(_CodeBlockRegularExpression, CODEBLOCK_REGULAR_EX);
+}
+
+static inline NSRegularExpression* NotEmptyLineRegularExpression() {
+    REGULAR_EXPRESSION(_NotEmptyLineRegularExpression, NOTEMPTYLINE_REGULAR_EX);
 }
 
 @implementation TOOSTextParser
@@ -127,6 +200,63 @@ static inline NSRegularExpression* H2RegularExpression() {
                 [textLayout.attributedText addAttribute:textLayout.headerFont.fontName value:textLayout.headerFonts[1] range:NSMakeRange(r.location, linebreak.location - r.location + 1)];
                 [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(linebreak.location + linebreak.length, r.location + r.length - linebreak.location - linebreak.length)];
             }
+        }];
+    }
+    
+    NSArray* breakline = [TOOSTextParser textLayoutContain:textLayout regularExpression:BreaklineRegularExpression()];
+    if (breakline.count > 0) {
+        [breakline enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:result.range];
+        }];
+    }
+    
+    NSArray* emphasis = [TOOSTextParser textLayoutContain:textLayout regularExpression:EmphasisRegularExpression()];
+    if (emphasis.count > 0) {
+        [emphasis enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            NSRange r = result.range;
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location, 1)];
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location + r.length - 1, 1)];
+            [textLayout.attributedText addAttribute:textLayout.italicFont.fontName value:textLayout.italicFont range:NSMakeRange(r.location + 1, r.length - 2)];
+        }];
+    }
+    
+    NSArray* strong = [TOOSTextParser textLayoutContain:textLayout regularExpression:StrongRegularExpression()];
+    if (strong.count > 0) {
+        [strong enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            NSRange r = result.range;
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location, 2)];
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location + r.length - 2, 2)];
+            [textLayout.attributedText addAttribute:textLayout.boldFont.fontName value:textLayout.boldFont range:NSMakeRange(r.location + 2, r.length - 4)];
+        }];
+    }
+    
+    NSArray* strongEmphasis = [TOOSTextParser textLayoutContain:textLayout regularExpression:StrongEmphasisRegularExpression()];
+    if (strongEmphasis.count > 0) {
+        [strongEmphasis enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            NSRange r = result.range;
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location, 3)];
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location + r.length - 3, 3)];
+            [textLayout.attributedText addAttribute:textLayout.boldItalicFont.fontName value:textLayout.boldItalicFont range:NSMakeRange(r.location + 3, r.length - 6)];
+        }];
+    }
+    
+    NSArray* underline = [TOOSTextParser textLayoutContain:textLayout regularExpression:UnderlineRegularExpression()];
+    if (underline.count > 0) {
+        [underline enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            NSRange r = result.range;
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location, 2)];
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location + r.length - 2, 2)];
+            [textLayout setTextUnderline:[TOOSTextDecoration decorationWithStyle:TOOSTextLineStyleSingle width:@1 color:nil] range:NSMakeRange(r.location + 2, r.length - 4)];
+        }];
+    }
+    
+    NSArray* strikeThrough = [TOOSTextParser textLayoutContain:textLayout regularExpression:StrikeThroughRegularExpression()];
+    if (strikeThrough.count > 0) {
+        [strikeThrough enumerateObjectsUsingBlock:^(NSTextCheckingResult *result, NSUInteger idx, BOOL *stop) {
+            NSRange r = result.range;
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location, 2)];
+            [textLayout setTextWithTextColor:textLayout.controlTextColor inRange:NSMakeRange(r.location + r.length - 2, 2)];
+            [textLayout setTextStrikethrough:[TOOSTextDecoration decorationWithStyle:TOOSTextLineStyleSingle width:@1 color:nil] range:NSMakeRange(r.location + 2, r.length - 4)];
         }];
     }
     
